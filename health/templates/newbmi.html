@@ -1,0 +1,350 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BMI
+{% endblock %}
+
+{% block main %}
+    {%if calbmi < 18.5%}
+        <div class="card text-white bg-warning mb-3" style="max-width: 100rem">
+          <div class="card-header">Your BMI</div>
+          <div class="card-body">
+            <h4 class="card-title">Alert!!</h4>
+            <p class="card-text">You are underweight. You need to gain weight. Your BMI should be between 18.5 and 24.9.</p>
+          </div>
+        </div>
+    {% elif calbmi >= 18.5 and calbmi < 24.9 %}
+         <div class="card text-white bg-success mb-3" style="max-width: 100rem">
+          <div class="card-header">Your BMI</div>
+          <div class="card-body">
+            <h4 class="card-title">Congratulations!!</h4>
+            <p class="card-text">You are under normal weight category. Maintain the same and be healthy.</p>
+          </div>
+        </div>
+
+    {% elif calbmi >= 24.9 and calbmi <= 29.9 %}
+        <div class="card text-white bg-danger mb-3" style="max-width: 100rem;">
+          <div class="card-header">Your BMI</div>
+          <div class="card-body">
+            <h4 class="card-title">Alert!!</h4>
+            <p class="card-text">You are overweight. You need to loose weight. Your BMI should be between 18.5 and 24.9.</p>
+          </div>
+        </div>
+    {%else%}
+        you are obese
+        <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+          <div class="card-header">Your BMI</div>
+          <div class="card-body">
+            <h4 class="card-title">Danger!!</h4>
+            <p class="card-text">You are <b>OBESE</b>. You need to loose weight. Your BMI should be between 18.5 and 24.9.</p>
+          </div>
+        </div>
+    {%endif%}
+    <br>
+    <h4>Your Height in cm is: {{newheight}}</h4>
+    <h4>Your Weight in kg is: {{weight}}</h4>
+    <h4>Your BMI is: {{calbmi}}</h4>
+      <br>
+    <h4>Check your expected weight range according to your height range</h4>
+    <br>
+
+
+    <table border="0" cellpadding="1" style="margin: auto; border-spacing: 1px;"><tbody><tr><th colspan="2" scope="col">
+<p class="typog--default-paragraph rtecenter">
+					<span><h3>Metric Measurement</h3></span>
+				</p>
+</th>
+</tr></tbody><tbody><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					<strong>Height (Without Shoes)</strong>
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					<strong>Healthy Weight Range (Min/Max)</strong>
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					148 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					44-55 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					150 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					45-56 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					152 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					46-58 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					154 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					47-59 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					156 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					49-61 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					158 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					50-62 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					160 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					51-64 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					162 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					52-66 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					164 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					54-67 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					166 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					55-69 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					168 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					56-71 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					170 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					58-72 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					172 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					59-74 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					174 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					61-76 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					176 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					62-77 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					178 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					63-79 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					180 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					65-81 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					182 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					66-83 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					184 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					68-85 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					186 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					69-86 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					188 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					71-88 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					190 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					72-90 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					192 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					74-92 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					194 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					75-94 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					196 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					77-96 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					200 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					80-100 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					202 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					82-102 kg
+				</p>
+</td>
+</tr><tr><td>
+<p class="typog--small-paragraph rtecenter">
+					204 cm
+				</p>
+</td>
+<td>
+<p class="typog--small-paragraph rtecenter">
+					83-104 kg
+				</p>
+</td>
+</tr></tbody></table><p class="typog--small-paragraph">
+
+</p>
+{% endblock %}

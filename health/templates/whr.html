@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    WHR
+{% endblock %}
+
+{% block main %}
+
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">The best index of obesity as a predictor of mayocardial infraction is waist-to-hip ratio.</p>
+        <footer class="blockquote-footer">Salim YusuF</footer>
+    </blockquote>
+    <div class="jumbotron">
+        <h1 class="display-4" style="color:blue;">WHR calculator for women & men</h1>
+        <p class="lead">Waist-to-hip ratio (WHR) is another measurement you can use to determine whether excess weight is putting your health at risk.</p>
+        <hr class="my-4">
+        <p style="color:black;">WHR measures the ratio of your waist circumference to your hip circumference. It determines how much fat is stored on your waist, hips, and buttocks. Experts have suggested that WHR is an accurate measure because, in addition to measurements such as your BMI calculation and BMR calculation, it matters where on your body you carry any excess weight.</p>
+        <br>
+        <hr class="my-4">
+        <h1 class="display-4">Ways to calculate your waist-to-hip ratio</h1>
+        <p class="lead" style="color:black;">Tape measures at the ready! Here’s how to get an accurate waist-to-hip ratio measurement.</p>
+        <ol align=>
+            <li>Stand up straight and breathe out. Use a tape measure to check the distance around the smallest part of your waist, just above your belly button. This is your waist circumference.</li>
+            <li>Then measure the distance around the largest part of your hips — the widest part of your buttocks. This is your hip circumference.</li>
+            <li>Calculate your WHR by dividing your waist circumference by your hip circumference.</li>
+        </ol>
+    </div>
+
+    <form action="/whr" method="post">
+        <div class="form-group">
+            <label for="gender" style="color:red;">Gender</label>
+            <select class="form-control" name="gender">
+                <option value = "male">Male</option>
+                <option value = "female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label style="color:red;">Waist:</label>
+            <input class="form-control" name="waist" placeholder="Waist in inches" type="numeric" min="0" required>
+        </div>
+        <div class="form-group">
+            <label style="color:red;">Hip:</label>
+            <input class="form-control" name="hip" placeholder="Hip in inches" min="0" type="numeric" min="0" required>
+        </div>
+        <br>
+
+        <B>Note:</B> If you don't know your data in inches <a href = "https://www.inches-to-cm.com/cm-to-inches.php">Click here</a>
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit">Calculate</button>
+    </form>
+
+{% endblock %}

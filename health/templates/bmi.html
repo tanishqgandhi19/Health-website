@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BMI
+{% endblock %}
+
+{% block main %}
+
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">BMI tells you how "BIG" you are, and not how "SICK" you are.</p>
+        <footer class="blockquote-footer">Dr. Arya M. Sharma</footer>
+    </blockquote>
+    <div class="jumbotron">
+        <h1 class="display-4" style="color:blue;">BMI calculator for women & men</h1>
+        <p class="lead">BMI (Body Mass Index) is a measure of whether you're a healthy weight for your height. Use this BMI calculator to check the adults in your family.</p>
+        <hr class="my-4">
+        <p>The calculator will give you an idea of how your weight compares to common values. Body Mass Index (or BMI) is calculated as your weight (in kilograms) divided by the square of your height (in metres) or BMI = Kg/M2.</p>
+    </div>
+    <form action="/bmi" method="post">
+        <div class="form-group">
+            <label style="color:red;">Weight:</label>
+            <input autocomplete="off" class="form-control" min="0" name="weight" placeholder="Weight in KiloGrams" type="numeric" title="Enter numeric value" required>
+        </div>
+        <div class="form-group">
+            <label style="color:red;">Height:</label>
+            <input class="form-control" name="height" placeholder="Height in ft.in" type="numeric" required>
+        </div>
+        <B>Note:</B> If you don't know your height in Feet <a href = "https://www.thecalculatorsite.com/conversions/common/cm-to-feet-inches.php">Click here</a>
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit">Calculate</button>
+    </form>
+
+{% endblock %}

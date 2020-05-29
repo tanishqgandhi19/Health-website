@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BMI
+{% endblock %}
+
+{% block main %}
+    <h4>Your Hip in cm is: {{hip}}</h4>
+    <h4>Your Waist in kg is: {{waist}}</h4>
+    <h4>Your WHR is: {{whr}}</h4>
+
+      <br>
+    <h4>Refer below to know your health risk</h4>
+    <br>
+     <table id="whrResultTable">
+     <tbody><tr>
+      <th>Female</th>
+      <th>Male</th>
+      <th>Health Risk</th>
+     </tr>
+     <tr>
+      <td>0.80 or lower</td>
+      <td>0.95 or lower</td>
+      <td class="whrGreen">Low health risk</td>
+     </tr><tr>
+     </tr><tr>
+      <td>0.81 to 0.84</td>
+      <td>0.96 to 1.0</td>
+      <td class="whrOrange">Moderate risk</td>
+     </tr>
+     <tr>
+      <td>0.85 or higher</td>
+      <td>1.0 or higher</td>
+      <td class="whrRed">High risk</td>
+     </tr>
+    </tbody></table>
+    <p>
+        Women with a ratio of 0.8 or below, and men at 0.95 or below are pear shaped. People with pear shaped bodies are in the lower risk category for health problems such as heart disease, type 2 diabetes and some forms of cancer.
+        </p>
+		<p>
+		Women with a ratio of 0.85 or above, and men with a ratio of 1.0 or above are considered to have apple shaped bodies. Fat tends to gather around the middle, and apple shaped bodies face a high risk of type 2 diabetes and heart disease, and even some types of cancer.
+		</p>
+{% endblock %}

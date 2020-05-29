@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h3 style="background-color:DodgerBlue;">Hello World! Welcome to HEALTH @ MONITOR</h3>
+    <br>
+    <br>
+    <h4>Do follow the given steps to fill your table.</h4>
+    <br>
+    <br>
+    <div class="list-group">
+        <a href="/bmi" class="list-group-item list-group-item-action active">Calculate your BMI</a>
+        <a href="/whr" class="list-group-item list-group-item-action">Calculate your WHR</a>
+        <a href="/bmr" class="list-group-item list-group-item-action active">Calculate your BMR</a>
+    </div>
+    <br>
+    <br>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Age</th>
+                <th scope="col">Height</th>
+                <th scope="col">Weight</th>
+                <th scope="col">BMI</th>
+                <th scope="col">BMR</th>
+                <th scope="col">WHR</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if data %}
+            <tr class="table-success">
+                <td>{{ username }}</td>
+                <td>{{ data[0]["age"] }}</td>
+                <td>{{ data[0]["height"] }}</td>
+                <td>{{ data[0]["weight"] }}</td>
+                <td>{{ data[0]["bmi"] }}</td>
+                <td>{{ data[0]["bmr"] }}</td>
+                <td>{{ data[0]["whr"] }}</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <h2>Daily enter yout weight to get the analysis of your weight</h2>
+    <form action="/" method="post">
+        <div class="form-group">
+            <label>Weight:</label>
+            <input autocomplete="off" class="form-control" id="weight"  name="weight" placeholder="Weight in KG" type="text" required>
+        </div>
+    </form>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Weight</th>
+                <th scope="col">Day</th>
+                <th scope="col">Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rows in read %}
+                <tr class="table-active">
+                    <td>{{ rows['weight'] }}</td>
+                    <td>{{ rows['date'] }}</td>
+                    <td>{{ rows['time'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

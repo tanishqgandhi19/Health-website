@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Fun Facts
+{% endblock %}
+
+{% block main %}
+
+    <h2>Fun facts and tips on health</h2>
+    <br>
+    <hr>
+    <h1 class="text-muted">Laughing can increase blood flow by 20%</h1>
+    <img src = "{{ url_for('static', filename='laugh.jpg') }}" alt = "image of laugh">
+    <br>
+    <hr>
+    <h1 class="text-primary">No matter how flexible you are, You can't kiss your elbow.</h1>
+    <img src = "{{ url_for('static', filename='kiss.jpg') }}" alt = "image of elbow">
+    <br>
+    <hr>
+    <h1 class="text-secondary">Bananas can help improve your mood..</h1>
+    <img src = "{{ url_for('static', filename='banana.jpg') }}" alt = "image of banana">
+    <br>
+    <hr>
+    <h1 class="text-warning">Optimism may help you live longer.</h1>
+    <img src = "{{ url_for('static', filename='positive.jpg') }}" alt = "image of positive">
+    <br>
+    <hr>
+    <h1 class="text-danger">Handwriting Things Can Help Your Memory.</h1>
+    <img src = "{{ url_for('static', filename='hand.jpg') }}" alt = "image of handwriting">
+    <br>
+    <hr>
+    <h1 class="text-success">To Cool Down, Drink Something Hot.</h1>
+    <img src = "{{ url_for('static', filename='drink.jpg') }}" alt = "image of drink">
+    <br>
+    <hr>
+    <h1 class="text-info">Your blood makes up nearly one-tenth of your total body weight.</h1>
+    <img src = "{{ url_for('static', filename='weight.jpg') }}" alt = "image of weight">
+    <br>
+    <hr>
+    <h1 class="text-muted">Riding a roller coaster could help you pass a kidney stone.</h1>
+    <img src = "{{ url_for('static', filename='roller.jpg') }}" alt = "image of roller">
+    <br>
+    <hr>
+    <h1 class="text-primary">Oatmeal helps fight depression.</h1>
+    <img src = "{{ url_for('static', filename='bmr.jpg') }}" alt = "image of meal">
+    <br>
+    <hr>
+{% endblock %}

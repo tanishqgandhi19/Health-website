@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BMR
+{% endblock %}
+{% block main %}
+    <h3> Your minimum calrofic requirement for resting metabolic process is: <b><h2><u>{{ calbmr }}</u> calories/day</h2></b></h3>
+    <p> If you do some kind of physical exercise look below for your case and calorie requirement.<p>
+    <h3>Your Total Daily Energy Expenditure (TDEE) is given below</h3>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+              <th scope="col">Activity Level</th>
+              <th scope="col">Active metabolic rate in Calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-info">
+              <td>Sedentary: little or no exercise</td>
+              <td>{{ sed }}</td>
+
+            </tr>
+            <tr class="table-light">
+              <td>Light exercise 1-3 times/week</td>
+              <td>{{ light }}</td>
+
+            </tr>
+            <tr class="table-info">
+              <td>Moderate exercise 4-5 times/week</td>
+              <td>{{ moderate }}</td>
+
+            </tr>
+            <tr class="table-light">
+              <td>Intense exercise 6-7 times/week</td>
+              <td>{{ intense }}</td>
+            </tr>
+            <tr class="table-info">
+              <td>Very Intense exercise</td>
+              <td>{{ very }}</td>
+            </tr>
+          </tbody>
+          <tfooter>
+            Equation used here is Mifflin-St Jeor Equation
+          </tfooter>
+    </table>
+    <br>
+    <br>
+    <h3>Your Daily Nutritional needs is given below:</h3>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+              <th scope="col">Carbohydrates in Calories/day</th>
+              <th scope="col">Carbohydrates in Grams/day</th>
+              <th scope="col">Proteins in Calories/day</th>
+              <th scope="col">Proteins in Grams/day</th>
+              <th scope="col">Fats in Calories/day</th>
+              <th scope="col">Fats in Grams/day</th>
+            </tr>
+        </thead>
+         <tbody>
+            <tr class="table-primary">
+              <td>{{ carbmin }} - {{ carbmax }}</td>
+              <td>{{ carbmin * 4 }} - {{ carbmax * 4 }}</td>
+              <td>{{ protmin  }} - {{ protmax }}</td>
+              <td>{{ protmin * 4 }} - {{ protmax * 4 }}</td>
+              <td>{{ fatmin }} - {{ fatmax }}</td>
+              <td>{{ fatmin * 4 }} - {{ fatmax * 4 }}</td>
+            </tr>
+          </tbody>
+          </table>
+
+{% endblock %}
