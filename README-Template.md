@@ -1,88 +1,45 @@
-# Project Title
+# Health Monitor-Webpage
 
-One Paragraph of project description goes here
+This is simple webpage which help to monitor person BMI,BMR,WHR along with few facts on health. It also give the daily track of your weight along with date and time to monitor your health.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+I did the project with help of flask web framework and CS50 IDE.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To do on our PC we need
+1) Python IDE
+2)FLASK
+3)SQL (sqlite3)
+4) virtual enviornment in our CMD
+to be installed and other libraries with help of pip
+```
+pip install flask
+pip install cs50(if needed)
 
 ```
-Give examples
-```
 
-### Installing
+### includes
 
-A step by step series of examples that tell you how to get a development env running
+The web page includes index, BMI,WHR,BMR pagegs
+1) Index page gives the details of your calculated data. It also displays the track record of our weight, only thing is you need to enter your weight daily
 
-Say what the step will be
+2) The BMI page gives you detail about bmi and indicates in which category you fall. Also it gives the desired weight range required based on your height.
 
-```
-Give the example
-```
+3) The WHR page gives the details of waist to hip ratio and indicates the health risk you have. 
 
-And repeat
+4) The BMR page gives the details of your calorie intake in rest as well as when engage in some physical activity. It also give you the carbohydrates/fats/protiens requirement for a body
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+5) The fun facts page is just to add the personal touch to the project such as it give sum tips and facts realted to health.
+ 
+ ## Built with
+ 
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/) - The web framework used
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Tanishq Gandhi**
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
